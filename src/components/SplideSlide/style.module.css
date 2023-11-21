@@ -1,0 +1,101 @@
+.sliderContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* height: 300px; */
+  height: 600px;
+  align-items: center;
+}
+
+.playBtn {
+  outline: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 40%;
+  margin-top: auto;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+
+.subHeading {
+  display: none;
+}
+.verticalLine {
+  display: none;
+}
+.infoContainer {
+  flex-direction: column;
+}
+
+.isHoverCon {
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.heading {
+  font-size: 1rem;
+  color: #ededed;
+  font-family: "Roboto", sans-serif;
+  line-height: 16px;
+  list-style: outside none none;
+  white-space: nowrap;
+}
+.subTitle {
+  display: flex;
+  text-align: start;
+  color: #ededed;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 500px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .subTitle {
+    font-size: 0.8rem;
+  }
+  .isHoverCon {
+    padding: 1rem 1rem 1rem 2.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .heading {
+    font-size: 2rem;
+  }
+  .subTitle {
+    font-size: 1rem;
+  }
+  .subHeading {
+    display: flex;
+    text-align: start;
+    color: #ededed;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 1.5rem;
+  }
+  .infoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+  .verticalLine {
+    display: block;
+    width: 2px;
+    height: 1.5rem;
+    border: 1px solid #ededed;
+  }
+}

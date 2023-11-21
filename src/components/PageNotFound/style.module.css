@@ -1,0 +1,79 @@
+.section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  display: none;
+}
+
+.para {
+  font-family: "Roboto" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  margin-top: 21px;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+.reloadButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0px;
+  width: 250px;
+  height: 56px;
+  background: #101111;
+  opacity: 0.8;
+  border-radius: 16px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  margin: 35px auto 44px;
+}
+
+.canvasWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 39px auto;
+}
+
+.btn {
+  font-family: "Rubik", "Verdana";
+  height: 27px;
+
+  background: #eeeeee;
+  border-radius: 5px;
+
+  margin: 0px 5px;
+  padding: 5px 10px;
+}
+
+.para .btn {
+  color: #000000 !important;
+}
+
+@media screen and (min-width: 700px) {
+  .reloadButton {
+    width: 311px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .section {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .reloadButton {
+    margin: 0px;
+  }
+}

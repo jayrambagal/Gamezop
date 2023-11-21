@@ -1,0 +1,70 @@
+.categoriesContainer {
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.gamesContainer {
+  max-width: 1300px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0.7rem;
+  line-height: 15px;
+  border: 0.8px solid rgb(221, 221, 221);
+}
+.headingContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 9px;
+}
+.categName {
+  font-family: "Roboto" sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: capitalize;
+  line-height: normal;
+}
+
+.catGamesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.gameCardCon {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 360px) {
+  .gameCardCon {
+    width: 47%;
+    height: auto;
+  }
+}
+@media (min-width: 600px) {
+  .gameCardCon {
+    width: 30%;
+    height: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .gameCardCon {
+    width: 194px;
+    height: auto;
+  }
+  .gamesContainer {
+    padding: 1rem;
+  }
+}
