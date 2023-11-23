@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 6rem 1rem 1rem 1rem;
+  margin: 7rem 1rem 1rem 1rem;
 }
 
 .gamesContainer {
@@ -43,7 +43,7 @@
   height: auto;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 320px) {
   .gameCardCon {
     width: 47%;
     height: auto;
@@ -66,5 +66,11 @@
   .gameCardCon {
     width: 194px;
     height: auto;
+  }
+  .categoriesContainer {
+    margin: 6rem 1rem 1rem 1rem;
+  }
+  .gamesContainer {
+    padding: 0 1.5rem;
   }
 }
