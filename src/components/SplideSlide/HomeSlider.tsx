@@ -22,15 +22,18 @@ const HomeSlider = () => {
                     transitionTime={1000}
                     stopOnHover={true}
                     swipeable={true}
-                    autoPlay={true}
-                    interval={2500}
+                    autoPlay={false}
+                    interval={2000}
+                    showThumbs={false}
                 >
                     {imgArray.map((img, idx) => (
-                        <div key={idx}>
+                        <div className={classes.crousel} key={idx} onMouseEnter={() => setIsHover(true)}
+                            onMouseLeave={() => setIsHover
+                                (false)}>
                             <span>
                                 <img src={img} alt={`image${idx}`} />
                             </span>
-                            <div
+                            {true && <div
 
                                 className={classes.isHoverCon}
                             >
@@ -46,7 +49,7 @@ const HomeSlider = () => {
                                 </div>
 
                                 <button className={classes.playBtn}>Play</button>
-                            </div>
+                            </div>}
                         </div>
                     ))}
                 </Carousel>

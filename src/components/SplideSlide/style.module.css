@@ -2,24 +2,30 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  /* height: 300px; */
-  height: 600px;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .playBtn {
   outline: none;
-  border-radius: 1rem;
-  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ededed;
+  color: #ededed;
+  background-color: transparent;
+  padding: 0.5rem 0.5rem;
   width: 40%;
   margin-top: auto;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   cursor: pointer;
-  border: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border 0.2s ease-in-out;
 }
-
+.playBtn:hover {
+  background-color: #ededed;
+  color: black;
+}
 .subHeading {
   display: none;
 }
@@ -31,16 +37,20 @@
 }
 
 .isHoverCon {
-  position: absolute;
-  top: 0;
   width: 40%;
   height: 100%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  position: absolute;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: start;
+  opacity: 0;
 }
+
 .heading {
   font-size: 1rem;
   color: #ededed;
@@ -58,15 +68,32 @@
   line-height: 1.5rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
+  .sliderContainer {
+    margin: 0;
+  }
   .heading {
     font-size: 1.5rem;
   }
   .subTitle {
     font-size: 0.8rem;
+    margin: 0;
   }
-  .isHoverCon {
-    padding: 1rem 1rem 1rem 2.5rem;
+  .crousel:hover .isHoverCon {
+    opacity: 1;
+  }
+  .playBtn {
+    font-size: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  .subHeading {
+    display: flex;
+    font-size: 16px;
+    line-height: 1.3rem;
+    text-align: start;
+    color: #ededed;
+    font-family: "Roboto", sans-serif;
   }
 }
 
@@ -78,10 +105,6 @@
     font-size: 1rem;
   }
   .subHeading {
-    display: flex;
-    text-align: start;
-    color: #ededed;
-    font-family: "Roboto", sans-serif;
     font-size: 18px;
     line-height: 1.5rem;
   }
@@ -97,5 +120,11 @@
     width: 2px;
     height: 1.5rem;
     border: 1px solid #ededed;
+  }
+  .playBtn {
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    width: 50%;
   }
 }

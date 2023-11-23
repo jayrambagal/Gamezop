@@ -1,13 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@300;400;500&display=swap");
 .body {
-  background-color: #ededed;
+  background-color: white;
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
+.body::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.homePageMainCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: 6rem 1rem 1rem 1rem;
+}
 .imageWidthHeight {
   width: 100%;
   height: 100%;
@@ -19,7 +34,7 @@ figure {
 
 .carousel-root {
   max-width: 1200px;
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -29,25 +44,43 @@ figure {
 .carousel .carousel-status {
   display: none;
 }
+.carousel.carousel-slider .control-arrow {
+  display: none;
+}
 
+.carousel .control-dots .dot.selected {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #3e51b5;
+}
+.carousel .control-dots .dot:hover {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #3e51b5;
+}
 @media (min-width: 280px) {
   .carousel .slide img {
     height: 200px;
     background-size: cover;
-    object-fit: cover;
+    object-fit: fill;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .carousel .slide img {
     height: 300px;
-    background-size: cover;
+  }
+  .body {
+    background-color: #ededed;
+  }
+  .homePageMainCon {
+    gap: 1rem;
   }
 }
 
 @media (min-width: 1000px) {
   .carousel .slide img {
-    height: 400px;
-    background-size: cover;
+    height: 350px;
+    /* background-size: cover; */
   }
 }
