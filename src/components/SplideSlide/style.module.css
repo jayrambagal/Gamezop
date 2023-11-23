@@ -2,24 +2,31 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  /* height: 300px; */
-  height: 600px;
+  height: 300px;
+  /* height: 500px; */
   align-items: center;
 }
 
 .playBtn {
   outline: none;
-  border-radius: 1rem;
-  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ededed;
+  color: #ededed;
+  background-color: transparent;
+  padding: 0.5rem 0.5rem;
   width: 40%;
   margin-top: auto;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   cursor: pointer;
-  border: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border 0.2s ease-in-out;
 }
-
+.playBtn:hover {
+  background-color: #ededed;
+  color: black;
+}
 .subHeading {
   display: none;
 }
@@ -31,15 +38,20 @@
 }
 
 .isHoverCon {
-  position: absolute;
-  top: 0;
   width: 40%;
   height: 100%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+.crousel:hover .isHoverCon {
+  opacity: 1;
 }
 .heading {
   font-size: 1rem;

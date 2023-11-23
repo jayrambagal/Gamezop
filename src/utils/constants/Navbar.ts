@@ -2,7 +2,7 @@ export const GAMEZOP_LOGO =
   "https://www.gamezop.com/_next/image?url=https%3A%2F%2Fstatic.gamezop.com%2Flogo%2Fgamezop-logo-blue-new.png&w=256&q=75";
 
 export const NAVBAR_PROFILE =
-  "https://www.gamezop.com/_next/image?url=https%3A%2F%2Fstatic.gamezop.com%2Fcomet%2Fassets%2Fimg%2Fcriczop%2Fworldcup.png&w=48&q=75";
+  "https://www.gamezop.com/_next/image?url=https%3A%2F%2Fstatic.gamezop.com%2Fcomet%2Fassets%2Fimg%2Fastrozop%2Fastrozop-tarot.gif&w=48&q=75";
 export const GAME_CATEGORIES_LISTS = [
   {
     name: "Action",

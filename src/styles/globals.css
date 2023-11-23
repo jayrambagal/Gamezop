@@ -19,7 +19,7 @@ figure {
 
 .carousel-root {
   max-width: 1200px;
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -29,7 +29,20 @@ figure {
 .carousel .carousel-status {
   display: none;
 }
+.carousel.carousel-slider .control-arrow {
+  display: none;
+}
 
+.carousel .control-dots .dot.selected {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #3e51b5;
+}
+.carousel .control-dots .dot:hover {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #3e51b5;
+}
 @media (min-width: 280px) {
   .carousel .slide img {
     height: 200px;
@@ -45,9 +58,9 @@ figure {
   }
 }
 
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   .carousel .slide img {
     height: 400px;
     background-size: cover;
   }
-}
+} */

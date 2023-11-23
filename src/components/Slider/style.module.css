@@ -1,0 +1,128 @@
+.HomePageCon {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 1rem 1rem 0 1rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 12px 59px 0px;
+  border: 0.8px solid rgb(221, 221, 221);
+  position: relative;
+  z-index: 0;
+
+  /* margin: 1rem 0; */
+}
+
+.categoriesContainer {
+  display: flex;
+  gap: 2.2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  position: relative;
+  padding: 1rem 0.6rem 0 0.6rem;
+}
+
+.categoriesContainer::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.slideBtns {
+  color: black;
+  background-color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+}
+
+.slideBtnLeft {
+  top: 50%;
+  left: 1rem;
+  z-index: 1;
+}
+.slideBtnRight {
+  top: 50%;
+  right: 1rem;
+  z-index: 1;
+}
+
+.headingContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* padding-left: 9px; */
+  padding: 0px 0rem 0 0.6rem;
+}
+.viewAllCon {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+.viewAllHead {
+  color: rgb(62, 81, 181);
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.viewAllBtn {
+  color: black;
+  background-color: #ffcc5b;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border: none;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-bottom: 3px;
+}
+.categName {
+  font-family: "Roboto" sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: capitalize;
+  line-height: normal;
+}
+
+.catGamesWrapper {
+  display: flex;
+  gap: 1rem;
+  /* overflow: scroll;
+  scroll-behavior: smooth;
+  flex-wrap: nowrap;
+
+  white-space: nowrap; */
+}
+.catGamesWrapper::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
