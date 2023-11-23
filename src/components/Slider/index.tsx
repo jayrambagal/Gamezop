@@ -9,12 +9,17 @@ import { GAMEZOP_ROUTES, GAMEZOP_ROUTES_ICONS } from "@/utils/enum";
 const TrendingSlider = ({ category, index }: any) => {
     const slideLeft = () => {
         let slider = document.getElementById(`slider${index}`);
-        slider.scrollLeft = slider.scrollLeft - 500;
+        if (slider) {
+            slider.scrollLeft = slider.scrollLeft - 500;
+        }
     };
 
     const slideRight = () => {
         let slider = document.getElementById(`slider${index}`);
-        slider.scrollLeft = slider.scrollLeft + 500;
+        if (slider) {
+            slider.scrollLeft = slider.scrollLeft + 500;
+        }
+
     };
     return (
         <>
