@@ -51,6 +51,6 @@ export const GAME_CATEGORIES_LISTS = [
     icon: "https://static.gamezop.com/comet/assets/img/categories-new/favourite.svg",
     selectedIcon:
       "https://static.gamezop.com/comet/assets/img/categories-new/favourite_white.svg",
-    path: "/my-favourites",
+    path: "/",
   },
 ];
