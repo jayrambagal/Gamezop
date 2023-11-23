@@ -6,7 +6,7 @@ import GameCard from "../GameCard/GameCard";
 import Link from "next/link";
 import Image from "next/image";
 import { GAMEZOP_ROUTES, GAMEZOP_ROUTES_ICONS } from "@/utils/enum";
-const TrendingSlider = ({ gamesData, index }: any) => {
+const TrendingSlider = ({ category, index }: any) => {
     const slideLeft = () => {
         let slider = document.getElementById(`slider${index}`);
         slider.scrollLeft = slider.scrollLeft - 500;
@@ -26,8 +26,8 @@ const TrendingSlider = ({ gamesData, index }: any) => {
                     {">"}
                 </button>
                 <div className={classes.headingContainer}>
-                    <img style={{ width: '26px', height: '29px' }} src={GAMEZOP_ROUTES_ICONS["action-games"]} alt="s" />
-                    <h2 className={classes.categName} >{GAMEZOP_ROUTES["action-games"]}</h2>
+                    <img style={{ width: '26px', height: '29px' }} src={GAMEZOP_ROUTES_ICONS[category.name]} alt="s" />
+                    <h2 className={classes.categName} >{GAMEZOP_ROUTES[category.name]}</h2>
 
                     <div className={classes.viewAllCon}>
                         <h2 className={classes.viewAllHead}>View All</h2>
@@ -37,8 +37,8 @@ const TrendingSlider = ({ gamesData, index }: any) => {
 
                 <div className={classes.categoriesContainer} id={`slider${index}`}>
                     <div className={classes.catGamesWrapper} >
-                        {gamesData?.map((game: any, index: number) => (
-                            <div style={{ width: '200px', height: 'auto' }}>
+                        {category?.data.map((game: any, index: number) => (
+                            <div className={classes.imageContainer}>
                                 <GameCard name={game.name.en} image={game.assets.square} url={game.url} />
                             </div>
 

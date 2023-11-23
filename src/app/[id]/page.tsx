@@ -1,11 +1,11 @@
 import classes from './style.module.css'
 import GameCard from "@/components/GameCard/GameCard"
 import { GAMEZOP_ROUTES, GAMEZOP_ROUTES_ICONS } from "@/utils/enum"
-import { getDataById } from "@/services/getDataById"
+import { getDataById } from "@/services"
 async function getCategorieData(id: string) { return getDataById(id) }
 
 export default async function name({ params }: { params: { id: string } }) {
-    const data = await getCategorieData("action-games")
+    const data = await getCategorieData(params.id)
     const newId = params.id
     return (
         <main className={classes.categoriesContainer}>
