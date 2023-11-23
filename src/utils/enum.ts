@@ -5,7 +5,6 @@ export const GAMEZOP_ROUTES: any = {
   "puzzle-and-logic-games": "Puzzle & Games",
   "sports-and-racing-games": "Sports & Games",
   "strategy-games": "Strategy",
-  "my-favourites": "My Favourites",
 };
 export const dummy = [
   "action-games",

@@ -17,38 +17,41 @@ const Navbar = () => {
     const [selectedCategorie, setSelectedCategorie] = useState<string>("");
     const [isSearch, setIsSearch] = useState(false);
     return (
-        <nav className={classes.navbarContainer}>
-            <Link href={"/"} className={classes.gamezopLogo}>
-                <img className="imageWidthHeight" src={GAMEZOP_LOGO} />
-            </Link>
+        <main className={classes.navbarMainCon}>
+            <nav className={classes.navbarContainer}>
+                <Link href={"/"} className={classes.gamezopLogo}>
+                    <img className="imageWidthHeight" src={GAMEZOP_LOGO} />
+                </Link>
 
-            <div className={classes.categorieCon}>
-                {GAME_CATEGORIES_LISTS.map((ele, idx) => (
-                    <Link
-                        href={ele.path}
-                        className={clsx(
-                            classes.categorieItemCon,
-                            selectedCategorie === ele.name && classes.selectedCatItemCon
-                        )}
-                        onClick={() => {
-                            setSelectedCategorie(ele.name);
-                        }}
-                        key={idx}
-                    >
-                        <img
-                            src={selectedCategorie === ele.name ? ele.selectedIcon : ele.icon}
-                            alt={ele.name}
-                        />
-                        <h4
+                <div className={classes.categorieCon}>
+                    {GAME_CATEGORIES_LISTS.map((ele, idx) => (
+                        <Link
+                            href={ele.path}
                             className={clsx(
-                                classes.categorieItemName,
-                                selectedCategorie === ele.name && classes.selectedCatItem
+                                classes.categorieItemCon,
+                                selectedCategorie === ele.name && classes.selectedCatItemCon
                             )}
+                            onClick={() => {
+                                setSelectedCategorie(ele.name);
+                            }}
+                            key={idx}
                         >
-                            {ele.name}
-                        </h4>
-                    </Link>
-                ))}
+                            <img
+                                src={selectedCategorie === ele.name ? ele.selectedIcon : ele.icon}
+                                alt={ele.name}
+                            />
+                            <h4
+                                className={clsx(
+                                    classes.categorieItemName,
+                                    selectedCategorie === ele.name && classes.selectedCatItem
+                                )}
+                            >
+                                {ele.name}
+                            </h4>
+                        </Link>
+                    ))}
+                </div>
+                <div className={classes.virticalLine}></div>
                 {isSearch ? (
                     <div className={classes.searchBarCon} >
                         <span className={classes.searchLeftCon} >
@@ -63,7 +66,7 @@ const Navbar = () => {
                             <Icons.Search />
                         </button>
                         <Link
-                            href={"https://sports.quizzop.com/"}
+                            href={"https://6302.read.astrozop.com/"}
                             className={classes.profileBtn}
                             target="_blank"
                         >
@@ -71,8 +74,33 @@ const Navbar = () => {
                         </Link>
                     </div>
                 )}
-            </div>
-        </nav>
+            </nav>
+            <nav className={classes.mobailNavCon}>
+                <div className={classes.mobailCategorieCon}>
+                    {GAME_CATEGORIES_LISTS.map((ele, idx) => (
+                        <Link
+                            href={ele.path}
+                            className={clsx(
+                                classes.categorieItemCon,
+                                selectedCategorie === ele.name && classes.selectedCatItemCon
+                            )}
+                            onClick={() => {
+                                setSelectedCategorie(ele.name);
+                            }}
+                            key={idx}
+                        >
+                            <img
+                                src={selectedCategorie === ele.name ? ele.selectedIcon : ele.icon}
+                                alt={ele.name}
+                            />
+                            <h4 className={clsx(classes.categorieItemName,
+                                selectedCategorie === ele.name && classes.selectedCatItem)}
+                            > {ele.name}</h4>
+                        </Link>
+                    ))}
+                </div>
+            </nav>
+        </main>
     );
 };
 

@@ -13,13 +13,10 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
-  padding: 0.7rem;
   line-height: 15px;
-  border: 0.8px solid rgb(221, 221, 221);
 }
 .headingContainer {
   display: flex;
@@ -57,14 +54,17 @@
     width: 30%;
     height: auto;
   }
+  .gamesContainer {
+    border: 0.8px solid rgb(221, 221, 221);
+    padding: 1rem;
+    gap: 0.5rem;
+    padding: 0.7rem;
+  }
 }
 
 @media (min-width: 900px) {
   .gameCardCon {
     width: 194px;
     height: auto;
-  }
-  .gamesContainer {
-    padding: 1rem;
   }
 }

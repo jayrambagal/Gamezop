@@ -22,7 +22,7 @@ const HomeSlider = () => {
                     transitionTime={1000}
                     stopOnHover={true}
                     swipeable={true}
-                    autoPlay={false}
+                    autoPlay={true}
                     interval={2000}
                     showThumbs={false}
                 >

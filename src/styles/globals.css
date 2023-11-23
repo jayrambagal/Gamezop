@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
   width: 95%;
-  margin: 6rem 1rem 1rem 1rem;
+  margin: 7.2rem 1rem 1rem 1rem;
 }
 .imageWidthHeight {
   width: 100%;
@@ -33,7 +33,7 @@ figure {
 }
 
 .carousel-root {
-  max-width: 1200px;
+  max-width: 1300px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -77,7 +77,11 @@ figure {
     gap: 1rem;
   }
 }
-
+@media (min-width: 780px) {
+  .homePageMainCon {
+    margin: 6rem 1rem 1rem 1rem;
+  }
+}
 @media (min-width: 1000px) {
   .carousel .slide img {
     height: 350px;
