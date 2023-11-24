@@ -17,6 +17,9 @@
 **Change the directory**
 `cd gamezop`
 
+**Add `.env` file**
+`API_KEY = gamezop_api`
+
 **Install the dependencies**
 `npm install`
 
