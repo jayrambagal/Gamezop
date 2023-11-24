@@ -1,6 +1,6 @@
 import classes from './style.module.css'
 import GameCard from "@/components/GameCard/GameCard"
-import { GAMEZOP_ROUTES, GAMEZOP_ROUTES_ICONS } from "@/utils/enum"
+import { CATEGORY_DETAILS } from "@/utils/enum"
 import { getDataById } from "@/services"
 async function getCategorieData(id: string) { return getDataById(id) }
 
@@ -11,8 +11,8 @@ export default async function name({ params }: { params: { id: string } }) {
         <main className={classes.categoriesContainer}>
             <section className={classes.gamesContainer}>
                 <div className={classes.headingContainer}>
-                    <img style={{ width: '26px', height: '29px' }} src={GAMEZOP_ROUTES_ICONS[newId]} alt="s" />
-                    <h2 className={classes.categName} >{GAMEZOP_ROUTES[newId]}</h2>
+                    <img style={{ width: '26px', height: '29px' }} src={CATEGORY_DETAILS[newId].icon} alt="s" />
+                    <h2 className={classes.categName} >{CATEGORY_DETAILS[newId].name}</h2>
                 </div>
 
                 <div className={classes.catGamesWrapper}>

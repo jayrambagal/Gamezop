@@ -1,19 +1,16 @@
-// "use client";
-// import TrendingSlider from '@/components/Slider';
-import HomeSlider from '@/components/SplideSlide/HomeSlider'
-import { homePageAllCatData } from '@/services';
 import dynamic from 'next/dynamic';
-const TrendingSlider = dynamic(() => import('@/components/Slider'), {})
+import { homeCategoryData } from '@/services';
+import HomeCarousel from '@/components/HomeCarousel'
+const CategoryContainer = dynamic(() => import('@/components/CategoryContainer'), {})
+
 
 export default async function Home() {
-  const allcatdata = await homePageAllCatData()
+  const categoriesData = await homeCategoryData()
   return (
     <main className='homePageMainCon'>
-      <HomeSlider />
-      {
-        allcatdata.map((cat, idx) => (
-          <TrendingSlider category={cat} key={idx} index={idx} />
-        ))
+      <HomeCarousel CarouselData={categoriesData} />
+      {categoriesData.map((data: any, index: number) => (
+        <CategoryContainer CategoryData={data} key={index} index={index} />))
       }
     </main>
   )

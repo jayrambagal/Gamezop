@@ -1,4 +1,4 @@
-import { GAMEZOP_ROUTES_CATORIES } from "@/utils/enum";
+import { CATEGORY_DETAILS } from "@/utils/enum";
 import { notFound } from "next/navigation";
 
 export const getAllData = async () => {
@@ -16,7 +16,7 @@ export const getDataById = async (id: string) => {
   const data = await res.json();
   try {
     const categoriesData = await data.games.filter((ele: any) => {
-      if (GAMEZOP_ROUTES_CATORIES[id] == ele.categories.en[0]) {
+      if (CATEGORY_DETAILS[id].category == ele.categories.en[0]) {
         return ele;
       }
     });
@@ -30,7 +30,7 @@ export const getDataById = async (id: string) => {
   }
 };
 
-export const homePageAllCatData = async () => {
+export const homeCategoryData = async () => {
   try {
     const ActionGames = await getDataById("action-games");
     const adventureGames = await getDataById("adventure-games");
