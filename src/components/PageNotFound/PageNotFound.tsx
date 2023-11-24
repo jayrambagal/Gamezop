@@ -449,8 +449,6 @@ const PageNotFound = () => {
         };
 
         gameStart();
-        gameStart();
-
     }, []);
 
     return (

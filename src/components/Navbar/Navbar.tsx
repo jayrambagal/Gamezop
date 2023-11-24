@@ -25,7 +25,7 @@ const Navbar = () => {
                             href={ele.path}
                             className={clsx(
                                 classes.categorieItemCon,
-                                pathname === ele.path && classes.selectedCatItemCon
+                                pathname === ele.path && pathname !== '/' && classes.selectedCatItemCon
                             )}
                             onClick={() => {
                                 setSelectedCategorie(ele.name);
@@ -33,13 +33,13 @@ const Navbar = () => {
                             key={idx}
                         >
                             <img
-                                src={pathname === ele.path ? ele.selectedIcon : ele.icon}
+                                src={pathname === ele.path && pathname !== '/' ? ele.selectedIcon : ele.icon}
                                 alt={ele.name}
                             />
                             <h4
                                 className={clsx(
                                     classes.categorieItemName,
-                                    pathname === ele.path && classes.selectedCatItem
+                                    pathname === ele.path && pathname !== '/' && classes.selectedCatItem
                                 )}
                             >
                                 {ele.name}
@@ -78,7 +78,7 @@ const Navbar = () => {
                             href={ele.path}
                             className={clsx(
                                 classes.categorieItemCon,
-                                pathname === ele.path && classes.selectedCatItemCon
+                                pathname === ele.path && pathname !== '/' && classes.selectedCatItemCon
                             )}
                             onClick={() => {
                                 setSelectedCategorie(ele.name);
@@ -86,11 +86,11 @@ const Navbar = () => {
                             key={idx}
                         >
                             <img
-                                src={pathname === ele.path ? ele.selectedIcon : ele.icon}
+                                src={pathname === ele.path && pathname !== '/' ? ele.selectedIcon : ele.icon}
                                 alt={ele.name}
                             />
                             <h4 className={clsx(classes.categorieItemName,
-                                pathname === ele.path && classes.selectedCatItem)}
+                                pathname === ele.path && pathname !== '/' && classes.selectedCatItem)}
                             > {ele.name}</h4>
                         </Link>
                     ))}
