@@ -84,7 +84,8 @@ figure {
 }
 @media (min-width: 1000px) {
   .carousel .slide img {
-    height: 350px;
+    height: 400px;
+    object-fit: cover;
     /* background-size: cover; */
   }
 }

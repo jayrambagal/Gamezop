@@ -1,35 +1,31 @@
 "use client";
 import React, { useState } from "react";
 import classes from "./style.module.css";
-import {
-    GAMEZOP_LOGO,
-    GAME_CATEGORIES_LISTS,
-    NAVBAR_PROFILE,
-} from "@/utils/constants/Navbar";
 import Link from "next/link";
 import clsx from "clsx";
-import { useRouter } from "next/navigation";
+import { usePathname } from 'next/navigation'
 import Icons from "../icons/indes";
-import { redirect } from "next/navigation";
+import { NAVBAR_CONTENT } from "@/utils/enum";
 
 const Navbar = () => {
-    const router = useRouter();
+    const pathname = usePathname()
     const [selectedCategorie, setSelectedCategorie] = useState<string>("");
-    const [isSearch, setIsSearch] = useState(false);
+    const [isSearch, setIsSearch] = useState<boolean>(false);
+
     return (
         <main className={classes.navbarMainCon}>
             <nav className={classes.navbarContainer}>
-                <Link href={"/"} className={classes.gamezopLogo}>
-                    <img className="imageWidthHeight" src={GAMEZOP_LOGO} />
+                <Link href={"/"} className={clsx(classes.gamezopLogo, isSearch && classes.gamezopLogoHide)}>
+                    <img className="imageWidthHeight" src={NAVBAR_CONTENT.logo} />
                 </Link>
 
                 <div className={classes.categorieCon}>
-                    {GAME_CATEGORIES_LISTS.map((ele, idx) => (
+                    {NAVBAR_CONTENT.categories.map((ele: any, idx: number) => (
                         <Link
                             href={ele.path}
                             className={clsx(
                                 classes.categorieItemCon,
-                                selectedCategorie === ele.name && classes.selectedCatItemCon
+                                pathname === ele.path && classes.selectedCatItemCon
                             )}
                             onClick={() => {
                                 setSelectedCategorie(ele.name);
@@ -37,13 +33,13 @@ const Navbar = () => {
                             key={idx}
                         >
                             <img
-                                src={selectedCategorie === ele.name ? ele.selectedIcon : ele.icon}
+                                src={pathname === ele.path ? ele.selectedIcon : ele.icon}
                                 alt={ele.name}
                             />
                             <h4
                                 className={clsx(
                                     classes.categorieItemName,
-                                    selectedCategorie === ele.name && classes.selectedCatItem
+                                    pathname === ele.path && classes.selectedCatItem
                                 )}
                             >
                                 {ele.name}
@@ -66,18 +62,18 @@ const Navbar = () => {
                             <Icons.Search />
                         </button>
                         <Link
-                            href={"https://6302.read.astrozop.com/"}
+                            href={NAVBAR_CONTENT.profile.url}
                             className={classes.profileBtn}
                             target="_blank"
                         >
-                            <img src={NAVBAR_PROFILE} alt="prfile" />
+                            <img src={NAVBAR_CONTENT.profile.image} alt="prfile" />
                         </Link>
                     </div>
                 )}
             </nav>
             <nav className={classes.mobailNavCon}>
                 <div className={classes.mobailCategorieCon}>
-                    {GAME_CATEGORIES_LISTS.map((ele, idx) => (
+                    {NAVBAR_CONTENT.categories.map((ele: any, idx: number) => (
                         <Link
                             href={ele.path}
                             className={clsx(

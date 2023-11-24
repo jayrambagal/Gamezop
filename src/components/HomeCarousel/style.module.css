@@ -111,20 +111,14 @@
   .infoContainer {
     width: 100%;
     display: flex;
-    flex-direction: row;
     gap: 1rem;
-    align-items: center;
   }
-  .verticalLine {
-    display: block;
-    width: 2px;
-    height: 1.5rem;
-    border: 1px solid #ededed;
-  }
+
   .playBtn {
     font-size: 18px;
     border-radius: 10px;
     font-weight: 700;
     width: 50%;
+    padding: 0.8rem 0.5rem;
   }
 }
