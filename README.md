@@ -1,7 +1,5 @@
-# GameZop Clone
-
-
-## Features 
+# GameZop Clone  
+**Live :** https://gamezop-one.vercel.app/
 - ### Adding 404- page not found game
 
      ![PageNotFoundigif](https://github.com/jayrambagal/gamezop/assets/94613732/0b36c0e7-8dac-4612-8a71-81cc6ef70148)     
