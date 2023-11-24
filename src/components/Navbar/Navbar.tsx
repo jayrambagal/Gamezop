@@ -78,7 +78,7 @@ const Navbar = () => {
                             href={ele.path}
                             className={clsx(
                                 classes.categorieItemCon,
-                                selectedCategorie === ele.name && classes.selectedCatItemCon
+                                pathname === ele.path && classes.selectedCatItemCon
                             )}
                             onClick={() => {
                                 setSelectedCategorie(ele.name);
@@ -86,11 +86,11 @@ const Navbar = () => {
                             key={idx}
                         >
                             <img
-                                src={selectedCategorie === ele.name ? ele.selectedIcon : ele.icon}
+                                src={pathname === ele.path ? ele.selectedIcon : ele.icon}
                                 alt={ele.name}
                             />
                             <h4 className={clsx(classes.categorieItemName,
-                                selectedCategorie === ele.name && classes.selectedCatItem)}
+                                pathname === ele.path && classes.selectedCatItem)}
                             > {ele.name}</h4>
                         </Link>
                     ))}

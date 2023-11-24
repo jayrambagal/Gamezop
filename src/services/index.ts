@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 export const getAllData = async () => {
   try {
-    const res = await fetch("https://pub.gamezop.com/v3/games?id=peSLSV");
+    const res = await fetch(`${process.env.API_KEY}`);
     const data = await res.json();
     return data;
   } catch (error) {
@@ -12,7 +12,7 @@ export const getAllData = async () => {
   }
 };
 export const getDataById = async (id: string) => {
-  const res = await fetch("https://pub.gamezop.com/v3/games?id=peSLSV");
+  const res = await fetch(`${process.env.API_KEY}`);
   const data = await res.json();
   try {
     const categoriesData = await data.games.filter((ele: any) => {
