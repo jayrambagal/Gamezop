@@ -118,3 +118,42 @@ export const NAVBAR_CONTENT: any = {
     },
   ],
 };
+
+export const SpringCards = [
+  {
+    coverImg: "https://static.gamezop.com/rkUcEM076/cover.jpg",
+    url: "https://peslsv.play.gamezop.com/g/rkUcEM076",
+  },
+  {
+    coverImg: "https://static.gamezop.com/SkGIa4X0l/cover.jpg",
+    url: "https://peslsv.play.gamezop.com/g/SkGIa4X0l",
+  },
+  {
+    coverImg: "https://static.gamezop.com/41FZfdyG-5x/cover.jpg",
+    url: "https://peslsv.play.gamezop.com/g/41FZfdyG-5x",
+  },
+  {
+    coverImg: "https://static.gamezop.com/rylf9Id_M0/cover.jpg",
+    url: "https://peslsv.play.gamezop.com/g/rylf9Id_M0",
+  },
+  {
+    coverImg: "https://static.gamezop.com/r1K-J3TQ5Ar/cover.jpg",
+    url: "https://peslsv.play.gamezop.com/g/r1K-J3TQ5Ar",
+  },
+  {
+    coverImg: "https://static.gamezop.com/Ske-CtBbdV/cover.jpg",
+    url: "https://peslsv.play.gamezop.com/g/Ske-CtBbdV",
+  },
+  {
+    coverImg: "https://static.gamezop.com/N1sZfO1fWqg/cover.jpg",
+    url: "https://peslsv.play.gamezop.com/g/N1sZfO1fWqg",
+  },
+  {
+    coverImg: "https://static.gamezop.com/41rGO1Gbqe/cover.jpg",
+    url: "https://peslsv.play.gamezop.com/g/41rGO1Gbqe",
+  },
+  {
+    coverImg: "https://static.gamezop.com/4ykgM_yzbcg/cover.jpg",
+    url: "https://peslsv.play.gamezop.com/g/4ykgM_yzbcg",
+  },
+];

@@ -4,11 +4,12 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import classes from './style.module.css'
 import { useRouter } from 'next/navigation'
+import DeckCards from "../DeckCards/page";
 const HomeCarousel = (CarouselData: any) => {
     const router = useRouter()
     const [isHover, setIsHover] = useState<boolean>(false);
     return (
-        <div>
+        <div className={classes.HomePageHeroSection}>
             <div className={classes.sliderContainer}>
                 <Carousel
                     infiniteLoop={true}
@@ -45,6 +46,7 @@ const HomeCarousel = (CarouselData: any) => {
                     ))}
                 </Carousel>
             </div>
+            <DeckCards />
         </div>
     );
 };
