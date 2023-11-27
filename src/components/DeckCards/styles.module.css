@@ -1,0 +1,62 @@
+.mainSpringContainer {
+  display: none;
+  width: 50%;
+  height: 400px;
+  position: relative;
+  background-color: transparent;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  /* border: 0.8px solid rgb(221, 221, 221); */
+}
+.container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  top: -0.1rem;
+  /* left: 5rem !important; */
+}
+.cards {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+}
+
+.cards > div {
+  background-color: white;
+  background-size: 95% 85%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 200px;
+  height: 300px;
+  will-change: transform;
+  border-radius: 10px;
+  box-shadow: 0 12.5px 100px -10px rgba(188, 182, 182, 0.4),
+    0 10px 10px -10px rgba(153, 149, 149, 0.3);
+}
+
+@media (min-width: 600px) {
+  .cards > div {
+    width: 300px;
+    height: 420px;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    justify-content: flex-start;
+    left: 5rem;
+  }
+}
+@media (min-width: 1100px) {
+  .mainSpringContainer {
+    display: block;
+  }
+}

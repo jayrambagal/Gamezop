@@ -1,7 +1,6 @@
 import Navbar from '@/components/Navbar/Navbar'
 import type { Metadata } from 'next'
 import '../styles/globals.css'
-
 export const metadata: Metadata = {
   title: 'Gamezop App',
   description: 'Play your favorite games',
