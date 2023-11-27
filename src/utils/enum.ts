@@ -114,7 +114,7 @@ export const NAVBAR_CONTENT: any = {
       icon: "https://static.gamezop.com/comet/assets/img/categories-new/favourite.svg",
       selectedIcon:
         "https://static.gamezop.com/comet/assets/img/categories-new/favourite_white.svg",
-      path: "/",
+      path: "/my-favourites",
     },
   ],
 };

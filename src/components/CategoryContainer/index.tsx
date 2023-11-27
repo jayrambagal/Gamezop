@@ -24,6 +24,7 @@ const CategoryContainer = ({
             });
         }
     };
+    // console.log('log:', CategoryData);
 
     const slideRight = () => {
         let slider = document.getElementById(`slider${index}`);
@@ -79,6 +80,7 @@ const CategoryContainer = ({
                                 name={game.name.en}
                                 image={game.assets.square}
                                 url={game.url}
+                                id={game.code}
                             />
                         </div>
                     ))}
