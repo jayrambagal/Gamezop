@@ -6,14 +6,20 @@ import clsx from "clsx";
 import { usePathname } from 'next/navigation'
 import Icons from "../icons/indes";
 import { NAVBAR_CONTENT } from "@/utils/enum";
+import { motion, useScroll } from "framer-motion";
 
 const Navbar = () => {
+    const { scrollYProgress } = useScroll();
     const pathname = usePathname()
     const [searchInput, setSearchInput] = useState<string>("");
     const [isSearch, setIsSearch] = useState<boolean>(false);
 
     return (
         <main className={classes.navbarMainCon}>
+            <motion.div
+                className="progress-bar"
+                style={{ scaleX: scrollYProgress }}
+            />
             {/* Desktop Navbar _____________________________________ */}
             <nav className={classes.navbarContainer}>
                 <Link href={"/"} className={clsx(classes.gamezopLogo, isSearch && classes.gamezopLogoHide)}>
