@@ -17,25 +17,29 @@ const CategoryContainer = ({
     const slideLeft = () => {
         let slider = document.getElementById(`slider${index}`);
         if (slider) {
-            slider.scrollLeft = slider.scrollLeft - 500;
+            slider.scrollLeft = slider.scrollLeft - 520;
+            console.log(slider.scrollLeft);
+
             setShowButton({
-                left: slider.scrollLeft > 500,
-                right: slider.scrollLeft < 500,
+                left: slider.scrollLeft > 530,
+                right: true,
             });
         }
     };
-    // console.log('log:', CategoryData);
+    // console.log('log:', showButton);
 
     const slideRight = () => {
         let slider = document.getElementById(`slider${index}`);
         if (slider) {
-            slider.scrollLeft = slider.scrollLeft + 500;
+            slider.scrollLeft = slider.scrollLeft + 520;
+
             setShowButton({
                 left: slider.scrollLeft >= 0,
                 right: slider.scrollLeft < 500,
             });
         }
     };
+
     return (
         <div className={classes.HomePageCon}>
             {showButton.left && (
