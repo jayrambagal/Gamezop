@@ -1,16 +1,7 @@
 import { CATEGORY_DETAILS } from "@/utils/enum";
 import { notFound } from "next/navigation";
 
-export const getAllData = async () => {
-  try {
-    const res = await fetch(`${process.env.API_KEY}`);
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    console.log(error);
-    return notFound();
-  }
-};
+// Fetching Game Data by Category/Id__________________________________
 export const getDataById = async (id: string) => {
   const res = await fetch(`${process.env.API_KEY}`);
   const data = await res.json();
@@ -30,7 +21,8 @@ export const getDataById = async (id: string) => {
   }
 };
 
-export const homeCategoryData = async () => {
+// Fetching first 9 Games Data by Category/Id for HomePage and slider_____________
+export const homeCategoryData = async (type?: string) => {
   try {
     const ActionGames = await getDataById("action-games");
     const adventureGames = await getDataById("adventure-games");

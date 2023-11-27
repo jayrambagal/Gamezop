@@ -19,7 +19,7 @@ export default async function name({ params }: { params: { id: string } }) {
                     {
                         data.map((game: any, index: number) => (
                             <figure className={classes.gameCardCon} key={index}>
-                                <GameCard name={game.name.en} image={game.assets.square} url={game.url} />
+                                <GameCard name={game.name.en} image={game.assets.square} url={game.url} id={game.code} />
                             </figure>
                         ))
                     }

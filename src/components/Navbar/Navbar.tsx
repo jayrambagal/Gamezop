@@ -9,11 +9,12 @@ import { NAVBAR_CONTENT } from "@/utils/enum";
 
 const Navbar = () => {
     const pathname = usePathname()
-    const [selectedCategorie, setSelectedCategorie] = useState<string>("");
+    const [searchInput, setSearchInput] = useState<string>("");
     const [isSearch, setIsSearch] = useState<boolean>(false);
 
     return (
         <main className={classes.navbarMainCon}>
+            {/* Desktop Navbar _____________________________________ */}
             <nav className={classes.navbarContainer}>
                 <Link href={"/"} className={clsx(classes.gamezopLogo, isSearch && classes.gamezopLogoHide)}>
                     <img className="imageWidthHeight" src={NAVBAR_CONTENT.logo} />
@@ -27,9 +28,6 @@ const Navbar = () => {
                                 classes.categorieItemCon,
                                 pathname === ele.path && pathname !== '/' && classes.selectedCatItemCon
                             )}
-                            onClick={() => {
-                                setSelectedCategorie(ele.name);
-                            }}
                             key={idx}
                         >
                             <img
@@ -52,7 +50,7 @@ const Navbar = () => {
                     <div className={classes.searchBarCon} >
                         <span className={classes.searchLeftCon} >
                             <Icons.Search color={'rgb(44, 44, 44)'} />
-                            <input className={classes.searchInputField} placeholder="Search for games" />
+                            <input value={searchInput} onChange={(e) => setSearchInput(e.target.value)} className={classes.searchInputField} placeholder="Search for games" />
                         </span>
                         <img style={{ width: '22px', height: '22px', cursor: 'pointer' }} src="https://static.gamezop.com/comet/assets/img/cross.svg" alt="crossIcon" onClick={() => setIsSearch(false)} />
                     </div>
@@ -71,6 +69,7 @@ const Navbar = () => {
                     </div>
                 )}
             </nav>
+            {/* Desktop + Mobail Navbar _____________________________________ */}
             <nav className={classes.mobailNavCon}>
                 <div className={classes.mobailCategorieCon}>
                     {NAVBAR_CONTENT.categories.map((ele: any, idx: number) => (
@@ -80,9 +79,6 @@ const Navbar = () => {
                                 classes.categorieItemCon,
                                 pathname === ele.path && pathname !== '/' && classes.selectedCatItemCon
                             )}
-                            onClick={() => {
-                                setSelectedCategorie(ele.name);
-                            }}
                             key={idx}
                         >
                             <img
